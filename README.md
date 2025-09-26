@@ -1,1 +1,52 @@
-# qt
+# ros_qt_demo
+
+## 241202-V045
+- 更新工程项目目录与修改cmake以适配新的工程目录
+
+## 241216-V046
+- 精简rapidcsv库中的文件内容
+
+## 241218-V047
+- 整理终端需要数据，实现数据类（存放再model中）
+- 精简工程项目内容，删除冗余文件
+
+## 241219-V048
+- 精简工程项目内容，删除冗余文件（MainWindow)
+- 新建MainWindow（实现新UI界面）
+
+## 241221-V051
+- 2 实现MainWindow主界面并绑定导航栏视图
+- 3.1 将登录页面嵌入
+- 3.2 将帮助页面嵌入
+- 3.3 将设置页面嵌入
+
+## 241223-V053_3
+初步实现了work_navi即导航页面的内容
+但是针对路径规划模块的内容，在这个版本进行了一定的探索。
+最终决定是让SQChart类中存放与路径相关的数据和处理数据的函数，然后将SQChart的对象传入到其他页面类中，这样就能实现数据的同步，同时也符合MVC设计模式
+
+## 241223-V053_4
+阅读pathplan的代码，感觉槽函数不用动，先从跟QProcess有关的函数动起！
+①将savePath_Launch改到qnode里
+②改setABLine_DotLine和setHalfCircle_DotLine函数(要先改坐标轴一系列的函数)（删减pathplan类中的内容，将其增加至chart中。）
+
+
+
+
+
+
+
+## 更改功能包名称
+下载此包或者克隆本包到自己的工作空间src目录下
+如果需要更改功能包的名称:
+- 使用文本编辑器的查找与替换功能替换```cmakelist.txt```与```package.xml```中的ros_qt_demo为自己想要的名称
+![image.png](https://i.postimg.cc/zfZ1s8RB/image.png)
+- 更改include目录下的文件夹名称为自己的功能包名称
+![image.png](https://i.postimg.cc/X7RhJxN1/image.png)
+
+- 更改src目录下三个cpp文件的的包含目录
+![image.png](https://i.postimg.cc/76WjCfgq/image.png)
+![image.png](https://i.postimg.cc/8ch8qT6D/image.png)
+
+
+
